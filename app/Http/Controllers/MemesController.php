@@ -29,6 +29,11 @@ class MemesController extends Controller
         return response()->json($returnJSON);
     }
 
+    public function create()
+    {
+      return view('add-meme');
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -38,7 +43,10 @@ class MemesController extends Controller
     public function store(Request $request)
     {
         Memes::create($request->all());
-        return response()->json(['message' => 'Meme stored successfully'], 200);
+        return response()->json([
+            'name' => $request->name,
+            'url' => $request->url
+        ]);
     }
 
     /**
