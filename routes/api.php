@@ -13,8 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/meme/all', 'MemesController@index')->name('memes.index');
-Route::get('/meme/page/{page}', 'MemesController@setByPage')->name('memes.bypage');
-Route::post('/meme/create', 'MemesController@store')->name('memes.store');
-Route::get('/meme/id/{memes}', 'MemesController@show')->name('memes.show');
-Route::get('/meme/popular', 'MemesController@popular')->name('memes.popular');
+Route::get('/meme/all', 'API\MemesController@index')->name('memes.index');
+Route::get('/meme/page/{page}', 'API\MemesController@setByPage')->name('memes.bypage');
+Route::post('/meme/create', 'API\MemesController@store')->name('memes.store');
+Route::get('/meme/id/{memes}', 'API\MemesController@show')->name('memes.show');
+Route::get('/meme/popular', 'API\MemesController@popular')->name('memes.popular');

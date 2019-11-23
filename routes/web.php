@@ -14,9 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('/meme/all', 'MemesController@index')->name('memes.index');
-Route::get('/meme/page/{page}', 'MemesController@setByPage')->name('memes.bypage');
-Route::post('/meme/create', 'MemesController@store')->name('memes.store');
-Route::get('/meme/id/{memes}', 'MemesController@show')->name('memes.show');
-Route::get('/meme/popular', 'MemesController@popular')->name('memes.popular');
